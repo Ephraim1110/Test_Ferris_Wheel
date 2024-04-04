@@ -1,0 +1,29 @@
+/* Styles for the h1 element */
+h1 {
+    color: #333;
+    font-size: 24px;
+    text-align: center;
+}
+
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#startButton {
+    background-color: #28a745;
+}
+
+#stopButton {
+    background-color: #dc3545;
+}
+
+#tournerXButton {
+    background-color: #ffc107;
+}

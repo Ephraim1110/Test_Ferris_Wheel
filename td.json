@@ -1,0 +1,136 @@
+{
+    "@context": "https://www.w3.org/2019/wot/td/v1",
+    "@type": "Thing",
+    "title": "ferris-wheel",
+    "securityDefinitions": {
+      "nosec_sc": {
+        "scheme": "nosec"
+      }
+    },
+    "security": "nosec_sc",
+    "properties": {
+      "enabled": {
+        "title": "Enabled",
+        "type": "boolean",
+        "observable": false,
+        "forms": [
+          {
+            "href": "http://34.91.249.112:8480/ferris-wheel/properties/enabled",
+            "contentType": "application/json",
+            "op": [
+              "readproperty",
+              "writeproperty"
+            ]
+          },
+          {
+            "href": "http://34.91.249.112:8480/ferris-wheel/properties/enabled",
+            "contentType": "application/cbor",
+            "op": [
+              "readproperty",
+              "writeproperty"
+            ]
+          }
+        ],
+        "readOnly": false,
+        "writeOnly": false
+      }
+    },
+    "actions": {
+      "start": {
+        "title": "Start ferris wheel",
+        "forms": [
+          {
+            "href": "http://34.91.249.112:8480/ferris-wheel/actions/start",
+            "contentType": "application/json",
+            "op": [
+              "invokeaction"
+            ],
+            "htv:methodName": "POST"
+          },
+          {
+            "href": "http://34.91.249.112:8480/ferris-wheel/actions/start",
+            "contentType": "application/cbor",
+            "op": [
+              "invokeaction"
+            ],
+            "htv:methodName": "POST"
+          }
+        ],
+        "idempotent": false,
+        "safe": false
+      },
+      "stop": {
+        "title": "Stop ferris wheel",
+        "forms": [
+          {
+            "href": "http://34.91.249.112:8480/ferris-wheel/actions/stop",
+            "contentType": "application/json",
+            "op": [
+              "invokeaction"
+            ],
+            "htv:methodName": "POST"
+          },
+          {
+            "href": "http://34.91.249.112:8480/ferris-wheel/actions/stop",
+            "contentType": "application/cbor",
+            "op": [
+              "invokeaction"
+            ],
+            "htv:methodName": "POST"
+          }
+        ],
+        "idempotent": false,
+        "safe": false
+      } ,
+      "pause": {
+        "title": "pause",
+        "forms": [
+            {
+                "href": "http://34.91.249.112:8480/ferris-wheel/actions/pause",
+                "contentType": "application/json",
+                "op": [
+                    "invokeaction"
+                ],
+                "htv:methodName": "POST"
+            },
+            {
+                "href": "http://34.91.249.112:8480/ferris-wheel/actions/pause",
+                "contentType": "application/cbor",
+                "op": [
+                    "invokeaction"
+                ],
+                "htv:methodName": "POST"
+            }
+        ],
+        "idempotent": false,
+        "safe": false
+    }
+
+      
+    },
+
+    "id": "urn:uuid:ae5e525d-809f-4ecf-9817-d68def6a56e1",
+    "base": "http://10.164.0.62:8480/ferris-wheel",
+    "forms": [
+      {
+        "href": "http://34.91.249.112:8480/ferris-wheel/properties",
+        "contentType": "application/json",
+        "op": [
+          "readallproperties",
+          "readmultipleproperties",
+          "writeallproperties",
+          "writemultipleproperties"
+        ]
+      },
+      {
+        "href": "http://34.91.249.112:8480/ferris-wheel/properties",
+        "contentType": "application/cbor",
+        "op": [
+          "readallproperties",
+          "readmultipleproperties",
+          "writeallproperties",
+          "writemultipleproperties"
+        ]
+      }
+    ]
+  }
